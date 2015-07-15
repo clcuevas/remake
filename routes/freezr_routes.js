@@ -52,7 +52,7 @@ module.exports = function(router) {
         return res.status(500).json({msg: 'internal server error'});
       }
 
-      res.json({msg: 'deleted successfully'});
+      res.json({msg: 'deleted item successfully'});
     });
   });//end DETELE method
 };

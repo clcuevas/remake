@@ -1,11 +1,42 @@
 'use strict';
 
 module.exports = function(grunt) {
+  //simple testing
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.loadNpmTasks('grunt-jscs');
+  //webpack files
   grunt.loadNpmTasks('grunt-webpack');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.initConfig({
+    jshint: {
+      dev: {
+        src: ['*.js', './models/**/*.js', './routes/**/*.js', './test/**/*.js']
+      },
+      options: {
+        jshintrc: '.jshintrc'
+      }
+    },
+
+    jscs: {
+      dev: {
+        src: ['<%= jshint.dev.src %>']
+      }
+    },
+
+    simplemocha: {
+      dev: {
+        src: ['./test/**/*.js']
+      }
+    },
+
+    /*WEBPACK config starts here:
+
+      [webpack, copy, clean]
+
+    */
     webpack: {
       client: {
         entry: __dirname + '/app/js/client.js',
@@ -38,5 +69,6 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.registerTask('test', ['jshint:dev', 'jscs:dev', 'simplemocha:dev']);
   grunt.registerTask('build:dev', ['webpack:client', 'copy:html']);
 };
