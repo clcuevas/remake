@@ -1,1 +1,1 @@
-Remake/ Testing with MySQL/PostgreSQL and REACT.
+Remake/ Testing with REACT.

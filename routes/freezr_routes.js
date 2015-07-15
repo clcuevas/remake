@@ -30,4 +30,29 @@ module.exports = function(router) {
       res.json(data);
     });
   });//end GET method
+
+  router.put('/food_items/:id', function(req, res) {
+    var updatedItem = req.body;
+    delete updatedItem._id;
+
+    Items.update({'_id': req.params.id}, updatedItem, function(err, data) {
+      if (err) {
+        console.log(err);
+        return res.status(500).json({msg: 'internal server error'});
+      }
+
+      res.json({msg: 'updated item successfully'});
+    });
+  });//end PUT method
+
+  router.delete('/food_items/:id', function(req, res) {
+    Items.remove({'_id': req.params.id}, function(err, data) {
+      if (err) {
+        console.log(err);
+        return res.status(500).json({msg: 'internal server error'});
+      }
+
+      res.json({msg: 'deleted successfully'});
+    });
+  });//end DETELE method
 };
