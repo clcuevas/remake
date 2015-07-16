@@ -13,6 +13,9 @@ var freezrRoutes = express.Router();
 
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/freezr_dev');
 
+
+app.use(express.static(__dirname + '/build'));
+
 //add routes here
 require('./routes/freezr_routes.js')(freezrRoutes);
 
