@@ -70,5 +70,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('test', ['jshint:dev', 'jscs:dev', 'simplemocha:dev']);
-  grunt.registerTask('build:dev', ['webpack:client', 'copy:html']);
+  grunt.registerTask('build', ['webpack:client', 'copy:html']);
 };
