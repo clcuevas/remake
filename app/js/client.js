@@ -8,26 +8,36 @@ require('angular-base64');
 var freezrApp = angular.module('freezrApp', ['ngRoute', 'ngCookies', 'base64']);
 
 //services
-
+require('./auth/services/auth_service.js')(freezrApp);
 
 //controllers
-
+require('./auth/controllers/auth_controller.js')(freezrApp);
 
 //directives
-
+require('./auth/directives/sign_in_directive.js')(freezrApp);
+require('./auth/directives/log_out_directive.js')(freezrApp);
+require('./auth/directives/display_user_directive.js')(freezrApp);
+require('./auth/directives/create_user_directive.js')(freezrApp);
 
 //freezrApp route configuration logic
 freezrApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
   $routeProvider
     .when('/sign_in', {
-      templateUrl: 'templates/views/auth.html',
-      controller: 'authCtrl'
+      templateUrl: 'templates/views/authentication.html',
+      controller: 'authController'
+    })
+    .when('/create_user', {
+      templateUrl: 'templates/views/authentication.html',
+      controller: 'authController'
+    })
+    .otherwise({
+      redirectTo: '/create_user'
     });
 }])
 .run(function($rootScope, $location, auth) {
   $rootScope.$on('$routeChangeStart', function(event, next, current) {
     if (!auth.isSignedIn()) {
-      if (next.$route.templateUrl !== 'templates/views/auth.html') {
+      if (next.$route.templateUrl !== 'templates/views/authentication.html') {
         $location.path('/sign_in');
       }
     }
