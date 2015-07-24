@@ -1,1 +1,1 @@
-Remake/ Testing with REACT.
+Freezr App - TEST
