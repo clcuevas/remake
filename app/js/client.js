@@ -18,6 +18,7 @@ require('./auth/directives/sign_in_directive.js')(freezrApp);
 require('./auth/directives/log_out_directive.js')(freezrApp);
 require('./auth/directives/display_user_directive.js')(freezrApp);
 require('./auth/directives/create_user_directive.js')(freezrApp);
+require('./directives/header_directive.js')(freezrApp);
 
 //freezrApp route configuration logic
 freezrApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {

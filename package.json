@@ -29,6 +29,8 @@
     "validator": "^3.41.2"
   },
   "devDependencies": {
+    "angular-base64": "^2.0.5",
+    "angular-cookies": "^1.4.3",
     "angular-route": "^1.4.3",
     "chai": "^3.0.0",
     "chai-http": "^1.0.0",
