@@ -3,4 +3,13 @@
     <label>Search: </label>
     <input type="text" placeholder="Search Your Freezr" data-ng-model="search.$">
   </div>
+  <h2>Your Inventory</h2>
+  <ul>
+    <li data-ng-repeat="item in displayedItems | filter:search" data-ng-click="saveSingleFood(item)">
+      <section class="item_wrapper" style="background-image: url({{item.imageURL}})">
+        <p>{{item.itemName}}</p>
+      </section>
+    </li>
+  </ul>
+  <div data-food-inventory-form-directive></div>
 </section>

@@ -11,6 +11,7 @@ var freezrApp = angular.module('freezrApp', ['ngRoute', 'ngCookies', 'base64']);
 require('./auth/services/auth_service.js')(freezrApp);
 require('./services/copy.js')(freezrApp);
 require('./services/food_data.js')(freezrApp);
+require('./services/rest_resource.js')(freezrApp);
 
 //controllers
 require('./auth/controllers/auth_controller.js')(freezrApp);
