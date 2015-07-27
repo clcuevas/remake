@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(app) {
-  app.directive('foodInventoryFoodDirective', function() {
+  app.directive('foodInventoryFormDirective', function() {
     return {
       restrict: 'AC',
       replace: true,
