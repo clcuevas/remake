@@ -16,6 +16,7 @@ require('./services/rest_resource.js')(freezrApp);
 //controllers
 require('./auth/controllers/auth_controller.js')(freezrApp);
 require('./controllers/food_controller.js')(freezrApp);
+require('./controllers/single_food_item_controller.js')(freezrApp);
 
 //directives
 require('./auth/directives/sign_in_directive.js')(freezrApp);
@@ -24,6 +25,7 @@ require('./auth/directives/display_user_directive.js')(freezrApp);
 require('./auth/directives/create_user_directive.js')(freezrApp);
 require('./directives/header_directive.js')(freezrApp);
 require('./directives/food_inventory_form_directive.js')(freezrApp);
+require('./directives/single_food_form_directive.js')(freezrApp);
 
 //freezrApp route configuration logic
 freezrApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
