@@ -116,6 +116,7 @@ module.exports = function(app) {
     //BELOW IMAGES NEED TO BE SAVED AND ADDED TO PROJECT UNDER lib/img
 
     $scope.populateImages = function(item) {
+      console.log('populate images function');
       if (item.itemType == 'vegetable') {
         item.imageURL = '../../lib/img/vegetable.jpg';
       }

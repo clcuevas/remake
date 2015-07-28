@@ -1,7 +1,7 @@
-<form class="new-item" data-ng-submit="save({item: item})">
+<form class="new-item" data-ng-submit="create({item: item})">
   <ul>
     <li>
-      <input type="text" placeholder="item name" data-ng-model="item.itemName" class="field-style field-full align-none"/>
+      <input type="text" placeholder="item name" data-ng-model="item.itemName" />
     </li>
     <li>
       <select data-ng-model="item.itemType" class="field-style field-split align-left">
@@ -36,7 +36,7 @@
       </select>
     </li>
     <li>
-      <input type="submit" value="Add Item" />
+      <input type="submit" value="Add Item"/>
     </li>
   </ul>
 </form>

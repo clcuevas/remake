@@ -1,13 +1,13 @@
 'use strict';
 
 module.exports = function(app) {
-  app.directive('foodInventoryFormDirective', function() {
+  app.directive('singleFoodItemEditDirective', function() {
     return {
       restrict: 'AC',
       replace: true,
-      templateUrl: '/templates/directives/food_inventory_form.html',
+      templateUrl: '/templates/directives/single_food_item_edit_form.html',
       scope: {
-        create: '&',
+        save: '&',
         buttonText: '=',
         item: '='
       },

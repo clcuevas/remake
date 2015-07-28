@@ -1,0 +1,15 @@
+<section class="single-food">
+  <ul>
+    <li data-ng-repeat="item in singleFood">
+      {{item.itemName}}
+      <button data-ng-if="!item.editing" data-ng-disabled="!item._id" data-ng-click="editItem(item)">Edit</button>
+      <div data-single-food-item-edit-directive
+            data-save="saveItem(item)"
+            data-button-text="'Save'"
+            data-ng-if="item.editing"
+            data-item="item">
+        <button data-ng-click="cancelEditing(item)">Cancel</button>
+      </div>
+    </li>
+  </ul>
+</section>
