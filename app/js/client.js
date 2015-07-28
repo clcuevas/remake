@@ -42,6 +42,10 @@ freezrApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $h
       templateUrl: 'templates/views/homepage.html',
       controller: 'foodController'
     })
+    .when('/item', {
+      templateUrl: 'templates/views/single_food_item.html',
+      controller: 'singleFoodController'
+    })
     .otherwise({
       redirectTo: '/create_user'
     });
