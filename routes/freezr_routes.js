@@ -2,13 +2,14 @@
 
 var bodyparser = require('body-parser');
 var Items = require('../models/Items.js');
+var eatAuth = require('../lib/eat_auth.js')(process.env.APP_SECRET);
 
 module.exports = function(router) {
   router.use(bodyparser.json());
 
-  router.post('/food_items', function(req, res) {
+  router.post('/food_items', eatAuth, function(req, res) {
     var newItem = new Items(req.body);
-    //newItem.authorID = req.user.username;
+    newItem.authorID = req.user.username;
     newItem.save(function(err, data) {
       if (err) {
         console.log(err);
@@ -19,9 +20,8 @@ module.exports = function(router) {
     });
   });//end POST method
 
-  router.get('/food_items', function(req, res) {
-    //add 'authorID: req.user.username' to display user items only when authentication is enabled
-    Items.find({}, function(err, data) {
+  router.get('/food_items', eatAuth, function(req, res) {
+    Items.find({authorID: req.user.username}, function(err, data) {
       if (err) {
         console.log(err);
         return res.status(500).json({msg: 'internal server error'});
