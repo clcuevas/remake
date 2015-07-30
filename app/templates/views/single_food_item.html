@@ -3,6 +3,7 @@
     <li data-ng-repeat="item in singleFood">
       {{item.itemName}}
       <button data-ng-if="!item.editing" data-ng-disabled="!item._id" data-ng-click="editItem(item)">Edit</button>
+      <button data-ng-if="!item.editing" data-ng-click="removeItem(item)">Delete</button>
       <div data-single-food-item-edit-directive
             data-save="saveItem(item)"
             data-button-text="'Save'"
