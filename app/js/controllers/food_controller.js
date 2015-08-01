@@ -118,23 +118,23 @@ module.exports = function(app) {
     $scope.populateImages = function(item) {
       console.log('populate images function');
       if (item.itemType == 'vegetable') {
-        item.imageURL = '../../lib/img/vegetable.jpg';
+        item.imageURL = 'img/vegetable.jpg';
       }
 
       if (item.itemType == 'fruit') {
-        item.imageURL = '../../lib/img/fruit.jpg';
+        item.imageURL = 'img/fruit.jpg';
       }
 
       if (item.itemType == 'meat') {
-        item.imageURL = '../../lib/img/meat.jpg';
+        item.imageURL = 'img/meat.jpg';
       }
 
       if (item.itemType == 'dairy') {
-        item.imageURL = '../../lib/img/dairy.jpg';
+        item.imageURL = 'img/dairy.jpg';
       }
 
       if (item.itemType == 'fish') {
-        item.imageURL = '../../lib/img/fish.jpg';
+        item.imageURL = 'img/fish.jpg';
       }
     };
 
