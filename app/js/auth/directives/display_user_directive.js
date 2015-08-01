@@ -6,7 +6,7 @@ module.exports = function(app) {
       restrict: 'AC',
       replace: false,
       scope: {},
-      templte: '<div data-ng-if="signedIn()"><p>Welcome, {{displayUsername()}}</p></div>',
+      template: '<div data-ng-if="signedIn()"><p>Welcome, {{displayUsername()}}</p></div>',
       controller: ['$scope', '$location', 'auth',
         function($scope, $location, auth) {
           $scope.signedIn = function() {
