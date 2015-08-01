@@ -11,7 +11,12 @@
       </section>
     </li>
   </ul>
-  <div data-food-inventory-form-directive
+</section>
+<section class="add_new_item">
+  <button ng-click="toggleForm()">Create New Food Item</button>
+  <div ng-show="showThisForm">
+    <div data-food-inventory-form-directive
         data-create="createNewItem(item)"
         data-item="item"></div>
+  </div>
 </section>
