@@ -1,7 +1,12 @@
 <section class="single-food">
   <ul>
     <li data-ng-repeat="item in singleFood">
-      {{item.itemName}}
+      <section class="item_wrapper" style="background-image: url({{item.imageURL}})">
+      </section>
+      <p>Name: {{item.itemName}}</p>
+      <p>Qty: {{item.qty}} {{item.qtyType}}</p>
+      <p>Cost: ${{item.cost}}</p>
+      <p>{{item.caption}}</p>
       <button data-ng-if="!item.editing" data-ng-disabled="!item._id" data-ng-click="editItem(item)">Edit</button>
       <div data-single-food-item-edit-directive
             data-save="saveItem(item)"
