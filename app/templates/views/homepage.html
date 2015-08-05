@@ -7,7 +7,7 @@
   <ul>
     <li data-ng-repeat="item in displayedItems | filter:search" data-ng-click="saveSingleFood(item)">
       <section class="item_wrapper" style="background-image: url({{item.imageURL}})">
-        <p>{{item.itemName}} <button data-ng-if="!item.editing" data-ng-click="removeItem(item)">Delete</button></p>
+        <p>{{item.itemName}} <button data-ng-if="!item.editing" data-ng-click="removeItem(item)">X</button></p>
       </section>
     </li>
   </ul>
