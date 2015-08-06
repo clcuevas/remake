@@ -1,11 +1,14 @@
 <section data-ng-controller="authController">
   <form data-ng-submit="authSubmit(user)">
     <fieldset>
-      <label for="email">Email: </label>
-      <input type="email" name="email" data-ng-model="user.email">
-      <label for="password">Password: </label>
-      <input type="password" name="password" data-ng-model="user.password">
-      <button type="submit">Submit</button>
+      <legend>Sign In</legend>
+      <p><label for="email">Email: </label><br />
+        <input type="email" required name="email" data-ng-model="user.email">
+      </p>
+      <p><label for="password">Password: </label><br />
+        <input type="password" required name="password" data-ng-model="user.password">
+      <p>
+      <button type="submit">Log In</button>
     </fieldset>
   </form>
 </section>

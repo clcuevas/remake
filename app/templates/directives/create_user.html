@@ -1,15 +1,20 @@
 <section data-ng-controller="authController" class="">
   <form data-ng-submit="authSubmit(user)" class="">
     <fieldset>
-      <label for="username">Username: </label>
-      <input type="text" name="username" data-ng-model="user.username">
-      <label for="email">Email: </label>
-      <input type="text" name="email" data-ng-model="user.email">
-      <label for="password">Password: </label>
-      <input type="password" name="password" data-ng-model="user.password">
-      <label for="password_conf">Confirm Password: </label>
-      <input type="password" name="password_conf" data-ng-model="user.password_conf">
-      <button type="submit">Submit</button>
+      <legend>Create New Account</legend>
+      <p><label for="username">Username: </label><br />
+        <input type="text" required name="username" data-ng-model="user.username">
+      </p>
+      <p><label for="email">Email: </label><br />
+        <input type="text" required name="email" data-ng-model="user.email">
+      </p>
+      <p><label for="password">Password: </label><br />
+        <input type="password" required name="password" data-ng-model="user.password">
+      </p>
+      <p><label for="password_conf">Confirm Password: </label><br />
+        <input type="password" required name="password_conf" data-ng-model="user.password_conf">
+      </p>
+      <button type="submit">Sign Up</button>
     </fieldset>
   </form>
 </section>
