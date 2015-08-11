@@ -10,3 +10,11 @@
   position:relative;
   border: 0.2em solid #ddd;
 }
+
+/*
+  NAVIGATION
+*/
+
+.nav > li {
+  margin-right: 5px;
+}
