@@ -9,11 +9,12 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body data-ng-app="freezrApp">
-  <header data-header-directive></header>
-  <div id="content">
-    <main data-ng-view></main>
+  <div id="page" class="site">
+    <header class="site-header" data-header-directive></header>
+    <main data-ng-view id="content" class=""></main>
+    <footer class="site-footer" data-footer-directive></footer>
   </div>
-  <footer data-footer-directive></footer>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="bundle.js"></script>
 </body>
