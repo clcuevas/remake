@@ -1,6 +1,6 @@
 <section class="auth" data-ng-controller="authController">
   <ul class="nav nav-tabs" role="presentation">
-    <li role="presentation" data-ng-repeat="tab in tabs"
+    <li class="tabular" data-toggle="tab" role="presentation" data-ng-repeat="tab in tabs"
       data-ng-class="{active:isActiveTab(tab.url)}"
       data-ng-click="onClickTab(tab)">
       {{tab.title}}

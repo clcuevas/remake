@@ -1,3 +1,19 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: scroll;
+}
+
+#content {
+  max-width: 960px;
+  margin: auto;
+  height: 100%;
+}
+
 .item_wrapper {
   height: 0;
   padding-bottom: 15%;
@@ -11,10 +27,52 @@
   border: 0.2em solid #ddd;
 }
 
+.site {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
 /*
   NAVIGATION
 */
 
 .nav > li {
   margin-right: 5px;
+  line-height: 1.42857143;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  border-color: #eee #eee #ddd;
 }
+
+.active {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+/*
+  AUTHENTICATION
+*/
+
+.auth {
+  height: 400px;
+  max-width: 50%;
+  margin: auto;
+  text-align: center;
+  background-color: #FAFAFA;
+  border: 2px solid transparent;
+  border-color: #337ab7;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/*
+  FOOTER
+*/
+.site-footer {
+  display: table-row;
+  height: 1px;
+  text-align: center;
+}
+
