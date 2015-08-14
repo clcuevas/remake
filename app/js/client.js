@@ -28,6 +28,8 @@ require('./directives/food_inventory_form_directive.js')(freezrApp);
 require('./directives/single_food_form_directive.js')(freezrApp);
 require('./directives/footer_directive.js')(freezrApp);
 
+require('./directives/dialog_directive.js')(freezrApp);
+
 //freezrApp route configuration logic
 freezrApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
   $routeProvider

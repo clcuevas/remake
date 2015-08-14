@@ -15,6 +15,10 @@ module.exports = function(app) {
     //grab obj clicked on and store to food data service
     $scope.singleFood = foodData.singleFood;
 
+    //TESTING DIALOG BOX
+    $scope.modalShown = false;
+
+
     $scope.saveSingleFood = function(thisItem) {
       $cookies.putObject('singleFood', foodData.store.filter(function(item) {
         return item._id === thisItem._id;
@@ -25,6 +29,9 @@ module.exports = function(app) {
     };
 
     $scope.toggleForm = function() {
+      //toggle modal dialog box
+      $scope.modalShown = !$scope.modalShown;
+
       if ($scope.showThisForm) {
         return $scope.showThisForm = false;
       } else {
@@ -89,6 +96,8 @@ module.exports = function(app) {
 
       //hide form after successfully creating new item
       $scope.showThisForm = false;
+      //hide modal dialog box
+      $scope.modalShown = false;
     };
 
     $scope.removeItem = function(item) {
