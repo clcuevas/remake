@@ -16,11 +16,11 @@ body {
   display: table;
   height: 100%;
   width: 100%;
-  background: url(../img/pantry.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
+  /*background: url(../img/pantry.jpg) no-repeat center center fixed;*/
+  /*-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 #content {
@@ -34,12 +34,33 @@ body {
 */
 
 .site-header {
+  position: relative;
   display: table-row;
   height: 80px;
   background-color: #669999;
 }
 
 .logo {
+  position: absolute;
+  top: -6px;
+  left: 10px;
+}
+
+.logo-text {
+  font-size: 36px;
+  color: #fff;
+}
+
+.logout {
+  position: absolute;
+  top: 3.5%;
+  right: 10px;
+}
+
+.username {
+  position: absolute;
+  top: 4%;
+  right: 90px;
   color: #fff;
 }
 
@@ -58,6 +79,10 @@ body {
   text-align:center;
   position:relative;
   border: 0.2em solid #ddd;
+}
+
+.item_list {
+  display: inline;
 }
 
 /*

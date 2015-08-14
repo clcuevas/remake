@@ -3,14 +3,16 @@
     <label>Search: </label>
     <input type="text" placeholder="Search Your Freezr" data-ng-model="search.$">
   </div>
-  <h2>Your Inventory</h2>
-  <ul>
-    <li data-ng-repeat="item in displayedItems | filter:search" data-ng-click="saveSingleFood(item)">
-      <section class="item_wrapper" style="background-image: url({{item.imageURL}})">
-        <p>{{item.itemName}} <button data-ng-if="!item.editing" data-ng-click="removeItem(item)">X</button></p>
-      </section>
-    </li>
-  </ul>
+  <div id="inventory">
+    <h2>Your Inventory</h2>
+    <ul>
+      <li class="item_list" data-ng-repeat="item in displayedItems | filter:search" data-ng-click="saveSingleFood(item)">
+        <section class="item_wrapper" style="background-image: url({{item.imageURL}})">
+          <p>{{item.itemName}} <button data-ng-if="!item.editing" data-ng-click="removeItem(item)">X</button></p>
+        </section>
+      </li>
+    </ul>
+  </div>
 </section>
 <section class="add_new_item">
   <button ng-click="toggleForm()">Create New Food Item</button>
