@@ -17,4 +17,13 @@
       </div>
     </li>
   </ul>
+  <div>
+    <button data-ng-click="toggleRecipes(item.itemName)">Get Recipes</button>
+    <ul>
+      <li data-ng-repeat="recipe in displayedRecipes">
+        <a href={{recipe.source_url}}><img src={{recipe.image_url}} /></a>
+        <h3>{{recipe.title}}</h3>
+      </li>
+    </ul>
+  </div>
 </section>

@@ -35,7 +35,7 @@ body {
 
 .site-header {
   display: table-row;
-  height: 100px;
+  height: 80px;
   background-color: #669999;
 }
 
@@ -83,12 +83,13 @@ body {
 */
 
 .auth {
-  height: 400px;
+  /*height: 400px;*/
+  max-height: 89%;
   max-width: 50%;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 8%;
   text-align: center;
-  background-color: #708090;
+  background-color: #F5F5F5;
   opacity: 0.97;
   border: 2px solid transparent;
   border-color: #337ab7;
@@ -97,7 +98,7 @@ body {
 }
 
 fieldset legend {
-  color: #fff;
+  color: #000;
   font-style: bold;
   font-size: 28px;
 }
@@ -107,7 +108,7 @@ fieldset legend {
 */
 .site-footer {
   display: table-row;
-  height: 100px;
+  height: 80px;
   background-color: #669999;
 }
 

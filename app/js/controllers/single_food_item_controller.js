@@ -5,28 +5,31 @@ module.exports = function(app) {
     var Item = resource('food_items');
 
     $scope.errors = [];
-    //$scope.recipes = [];
-    //$scope.displayedRecipes = [];
-    //$scope.showRecipes;
+    $scope.recipes = [];
+    $scope.displayedRecipes = [];
+    $scope.showRecipes;
 
-    // $scope.toggleRecipes = function() {
-    //   if($scope.showRecipes) {
-    //     $scope.showRecipes = false;
-    //     return;
-    //   } else {
-    //     $scope.showRecipes = true;
-    //     var foodObj = $cookies.getObject('singleFood');
-    //     var foodName = foodObj[0].itemName;
-    //     $http.get('/api/recipes/' + foodName)
-    //       .success(function(data) {
-    //         $scope.recipes = data;
-    //         $scope.displayedRecipes = $scope.recipes.slice(0,4);
-    //       }).error(function(err) {
-    //         console.log(err);
-    //       });
-    //     return;
-    //   }
-    // };
+    $scope.toggleRecipes = function() {
+      if($scope.showRecipes) {
+        $scope.showRecipes = false;
+        return;
+      } else {
+        $scope.showRecipes = true;
+
+        var foodObj = $cookies.getObject('singleFood');
+        var foodName = foodObj[0].itemName;
+
+        $http.get('/api/recipes/' + foodName)
+          .success(function(data) {
+            $scope.recipes = data;
+            $scope.displayedRecipes = $scope.recipes.slice(0,4);
+          }).error(function(err) {
+            console.log(err);
+          });
+
+        return;
+      }
+    };
 
     function makeCookie() {
       if (foodData.singleFood === null) {
