@@ -15,6 +15,12 @@ module.exports = function(app) {
     //grab obj clicked on and store to food data service
     $scope.singleFood = foodData.singleFood;
 
+    //TESTING DIALOG BOX
+    $scope.modalShown = false;
+    $scope.toggleModal = function() {
+      $scope.modalShown = !$scope.modalShown;
+    };
+
     $scope.saveSingleFood = function(thisItem) {
       $cookies.putObject('singleFood', foodData.store.filter(function(item) {
         return item._id === thisItem._id;
