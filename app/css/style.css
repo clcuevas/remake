@@ -53,15 +53,16 @@ body {
 
 .logout {
   position: absolute;
-  top: 3.5%;
+  top: 2.5%;
   right: 10px;
 }
 
 .username {
   position: absolute;
-  top: 4%;
-  right: 90px;
+  top: 2.5%;
+  right: 110px;
   color: #fff;
+  font-size: 18px;
 }
 
 /*
