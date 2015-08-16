@@ -13,9 +13,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-karma');
 
   grunt.initConfig({
+    jasmine: {
+      src: ['test/karma_test/*test.js']
+    },
+
     jshint: {
       dev: {
-        src: ['*.js', './models/**/*.js', './routes/**/*.js', './test/**/*.js']
+        src: ['*.js', './models/**/*.js', './routes/**/*.js', './app/**/*.js', './lib/**/*.js', './test/**/*.js']
       },
       options: {
         jshintrc: '.jshintrc'

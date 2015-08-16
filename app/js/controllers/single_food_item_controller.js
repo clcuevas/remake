@@ -7,7 +7,7 @@ module.exports = function(app) {
     $scope.errors = [];
     $scope.recipes = [];
     $scope.displayedRecipes = [];
-    $scope.showRecipes;
+    $scope.showRecipes; //jshint ignore:line
 
     $scope.toggleRecipes = function() {
       if($scope.showRecipes) {

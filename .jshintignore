@@ -1,0 +1,4 @@
+build/**
+test/client/bundle.js
+test/karma_test/bundle.js
+app/bootstrap/**

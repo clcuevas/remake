@@ -33,9 +33,9 @@ module.exports = function(app) {
       $scope.modalShown = !$scope.modalShown;
 
       if ($scope.showThisForm) {
-        return $scope.showThisForm = false;
+        return $scope.showThisForm = false; //jshint ignore:line
       } else {
-        return $scope.showThisForm = true;
+        return $scope.showThisForm = true; //jshint ignore:line
       }
     };
 
