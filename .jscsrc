@@ -6,5 +6,6 @@
   "while"
   ],
   "validateQuoteMarks": "'",
-  "requireCapitalizedConstructors": true
+  "requireCapitalizedConstructors": true,
+  "excludeFiles": ["build/**", "test/client/bundle.js", "test/karma_test/bundle.js", "app/bootstrap/**"]
 }
