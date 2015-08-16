@@ -50,6 +50,19 @@ module.exports = function(grunt) {
           path: 'build/',
           filename: 'bundle.js'
         }
+      },
+      karmaTest: {
+        entry: __dirname + '/test/karma_test/test_client.js',
+        output: {
+          path: 'test/karma_test/',
+          file: 'bundle.js'
+        }
+      }
+    },
+
+    karma: {
+      test: {
+        configFile: 'karma.conf.js'
       }
     },
 
@@ -76,5 +89,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('test', ['jshint:dev', 'jscs:dev', 'simplemocha:dev']);
+  grunt.registerTask('karmatest', ['webpack:karmaTest', 'karma:test']);
   grunt.registerTask('build', ['webpack:client', 'copy:html']);
 };
