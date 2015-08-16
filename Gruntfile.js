@@ -9,6 +9,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-webpack');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  //angular, karma test files
+  grunt.loadNpmTasks('grunt-karma');
 
   grunt.initConfig({
     jshint: {
