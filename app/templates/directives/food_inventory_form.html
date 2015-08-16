@@ -12,10 +12,14 @@
         <option value="meat">Meat</option>
         <option value="fish">Fish</option>
       </select>
+    </li>
+    <li>
       <input type="date" data-ng-model="item.exp" class="field-style field-split align-right" placeholder="expiration" />
     </li>
     <li>
       <input type="number" placeholder="quantity" data-ng-model="item.qty" class="field-style field-split align-left"/>
+    </li>
+    <li>
       <select data-ng-model="item.qtyType" class="field-style field-split align-right">
         <option value="" disabled selected>measure</option>
         <option value="bunch">bunch</option>
@@ -25,6 +29,8 @@
         <option value="fl oz">fl oz</option>
         <option value="lb">lb</option>
       </select>
+    </li>
+    <li>
       <input type="currency" placeholder="cost" data-ng-model="item.cost" class="field-style field-split align-left"/>
     </li>
     <li>
@@ -37,7 +43,7 @@
       </select>
     </li>
     <li>
-      <textarea data-ng-model="item.caption" rows="10" cols="50">Add Food Item Caption</textarea>
+      <textarea data-ng-model="item.caption" rows="5" cols="50">Add Food Item Caption</textarea>
     </li>
     <li>
       <input type="submit" value="Add Item" />
