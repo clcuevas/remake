@@ -9,6 +9,8 @@
     "afterEach": true,
     "expect": true,
     "angular": true,
+    "browser": true,
+    "document": true,
     "window": true
   }
 }

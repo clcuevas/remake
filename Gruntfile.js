@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 
     simplemocha: {
       dev: {
-        src: ['./test/**/*.js']
+        src: ['./test/freezr_api_test.js']
       }
     },
 
@@ -90,5 +90,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', ['jshint:dev', 'jscs:dev', 'simplemocha:dev']);
   grunt.registerTask('karmatest', ['webpack:karmaTest', 'karma:test']);
+  grunt.registerTask('dev:tests', ['test', 'karmatest']);
   grunt.registerTask('build', ['webpack:client', 'copy:html']);
 };
