@@ -68,5 +68,7 @@ describe('food controller', function() {
         expect($location.path()).toBe('/item');
       });
     });
+
+    //ADD MORE TESTS, createNewItem, getDisplayedItems, etc.
   });
 });
