@@ -35,7 +35,23 @@ h3.logo-text {
   HOMEPAGE CONTENT
 */
 #content {
-  padding-bottom:100px; /* Height of the footer element */
+  padding-top: 3%;
+  padding-bottom: 12%; /* Height of the footer element */
+  overflow: auto;
+}
+
+/* Food Items Wrapper */
+.item_wrapper {
+  height: 0;
+  width: 15%;
+  padding-bottom: 15%;
+  margin: 2%;
+  border-radius: 10px;
+  float:left;
+  background-size: cover;
+  text-align:center;
+  position:relative;
+  border: 0.2em solid #ddd;
 }
 
 /*
