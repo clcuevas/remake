@@ -22,13 +22,74 @@ body {
 
 #header {
   background-color: #669999;
-  height: 50px;
+  height: 60px;
 }
 
 h3.logo-text {
   color: #fff;
   font-size: 24px;
   float: left;
+}
+
+/*
+  AUTHENTICATION
+*/
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav > li {
+  margin-right: 5px;
+  margin-bottom: -1px;
+  line-height: 1.42857143;
+  float: left;
+  position: relative;
+  display: block;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  border-color: #eee #eee #ddd;
+}
+
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd;
+}
+
+.active {
+  background-color: #CC5543;
+  color: #fff;
+}
+
+.auth {
+  /*height: 400px;*/
+  max-height: 89%;
+  max-width: 50%;
+  margin: auto;
+  margin-top: 8%;
+  text-align: center;
+  background-color: #E6E2DF;
+  opacity: 0.97;
+  border: 2.5px solid transparent;
+  border-color: #CC5543;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+fieldset legend {
+  color: #000;
+  font-style: bold;
+  font-size: 28px;
 }
 
 /*
