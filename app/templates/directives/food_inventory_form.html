@@ -1,26 +1,26 @@
 <form class="new-item" data-ng-submit="create({item: item})">
   <ul>
     <li>
-      <input type="text" placeholder="item name" data-ng-model="item.itemName" />
+      <label>Item Name: <input type="text" placeholder="item name" data-ng-model="item.itemName" /></label>
     </li>
     <li>
-      <select data-ng-model="item.itemType" class="field-style field-split align-left">
+      <label>Food Type: <select data-ng-model="item.itemType" class="field-style field-split align-left">
         <option value="" disabled selected>category</option>
         <option value="vegetable">Vegetable</option>
         <option value="fruit">Fruit</option>
         <option value="dairy">Dairy</option>
         <option value="meat">Meat</option>
         <option value="fish">Fish</option>
-      </select>
+      </select></label>
     </li>
     <li>
-      <input type="date" data-ng-model="item.exp" class="field-style field-split align-right" placeholder="expiration" />
+      <label>Expiration Date: <input type="date" data-ng-model="item.exp" placeholder="yyyy-mm-dd" /></lable>
     </li>
     <li>
-      <input type="number" placeholder="quantity" data-ng-model="item.qty" class="field-style field-split align-left"/>
+      <label>Qty: <input type="number" placeholder="quantity" data-ng-model="item.qty" class="field-style field-split align-left"/></label>
     </li>
     <li>
-      <select data-ng-model="item.qtyType" class="field-style field-split align-right">
+      <label>Measurement: <select data-ng-model="item.qtyType" class="field-style field-split align-right">
         <option value="" disabled selected>measure</option>
         <option value="bunch">bunch</option>
         <option value="cup">cup</option>
@@ -28,22 +28,22 @@
         <option value="oz">oz</option>
         <option value="fl oz">fl oz</option>
         <option value="lb">lb</option>
-      </select>
+      </select></label>
     </li>
     <li>
-      <input type="currency" placeholder="cost" data-ng-model="item.cost" class="field-style field-split align-left"/>
+      <label>Item Cost: <input type="currency" placeholder="cost" data-ng-model="item.cost" class="field-style field-split align-left"/></label>
     </li>
     <li>
-      <select data-ng-model="item.storageType" class="field-style field-split align-right">
+      <label>Storage: <select data-ng-model="item.storageType" class="field-style field-split align-right">
         <option value="" disabled selected style='display:none;'>storage area</option>
         <option value="refrigerator">Refrigerator</option>
         <option value="freezer">Freezer</option>
         <option value="pantry">Pantry</option>
         <option value="cabinet">Kitchen</option>
-      </select>
+      </select></label>
     </li>
     <li>
-      <textarea data-ng-model="item.caption" rows="5" cols="50">Add Food Item Caption</textarea>
+      <textarea data-ng-model="item.caption" placeholder="Add food description here..." rows="5" cols="50"></textarea>
     </li>
     <li>
       <input type="submit" value="Add Item" />

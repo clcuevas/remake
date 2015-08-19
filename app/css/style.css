@@ -23,30 +23,40 @@ body {
 #header {
   background-color: #669999;
   height: 60px;
+  position: relative;
 }
 
-h3.logo-text {
+.logo h3.logo-text {
+  position: absolute;
   color: #fff;
-  font-size: 24px;
+  font-size: 36px;
   float: left;
+  left: 10%;
+  top: -20%;
+}
+
+.logout {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
+
+.username {
+  position: absolute;
+  top: 30%;
+  right: 17%;
+  color: #fff;
+  font-size: 18px;
 }
 
 /*
   AUTHENTICATION
 */
-.nav {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
 
 .nav > li {
   margin-right: 5px;
-  margin-bottom: -1px;
   line-height: 1.42857143;
   float: left;
-  position: relative;
-  display: block;
   padding: 10px;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
@@ -71,12 +81,23 @@ h3.logo-text {
   color: #fff;
 }
 
+.auth_message {
+  float: left;
+  left: auto;
+  position: absolute;
+  width: 400px;
+  margin-top: 1%;
+}
+
 .auth {
-  /*height: 400px;*/
+  float: right;
+  right: 15%;
+  position: absolute;
   max-height: 89%;
+  width: 400px;
   max-width: 50%;
   margin: auto;
-  margin-top: 8%;
+  margin-top: 4%;
   text-align: center;
   background-color: #E6E2DF;
   opacity: 0.97;
@@ -99,6 +120,14 @@ fieldset legend {
   padding-top: 3%;
   padding-bottom: 12%; /* Height of the footer element */
   overflow: auto;
+  margin: 0 auto;
+  width: 960px;
+}
+
+.new-item-btn {
+  position: absolute;
+  right: 18%;
+  top: 95px;
 }
 
 /* Food Items Wrapper */
@@ -113,6 +142,66 @@ fieldset legend {
   text-align:center;
   position:relative;
   border: 0.2em solid #ddd;
+}
+
+/*
+  DIALOG BOX TEST
+*/
+
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position:absolute;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity: 0.6;
+}
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index:10000;
+  position: absolute;
+  width: 50%; /* Default */
+
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #D1CEC5;
+  box-shadow: 4px 4px 80px #000;
+}
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: left;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+
+form.new-item {
+  margin: 5% 25% 5% 23%;
+}
+
+form.new-item label {
+  font-weight: normal;
+}
+
+.new-item li {
+  font-size: 14px;
+  padding: 2px;
 }
 
 /*
