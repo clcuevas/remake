@@ -31,15 +31,15 @@
   },
   "devDependencies": {
     "angular-base64": "^2.0.5",
-    "angular-cookies": "^1.4.3",
+    "angular-cookies": "^1.4.4",
     "angular-mocks": "^1.4.4",
-    "angular-route": "^1.4.3",
-    "chai": "^3.0.0",
+    "angular-route": "^1.4.4",
+    "chai": "^3.2.0",
     "chai-http": "^1.0.0",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-copy": "^0.8.1",
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-jscs": "^1.8.0",
     "grunt-karma": "^0.12.0",
@@ -52,9 +52,9 @@
     "mocha": "^2.2.5",
     "node-libs-browser": "^0.5.2",
     "phantomjs": "^1.9.18",
-    "superagent": "^1.2.0",
+    "superagent": "^1.3.0",
     "superagent-cli": "^2.0.0",
-    "webpack": "^1.10.1",
+    "webpack": "^1.11.0",
     "webpack-dev-server": "^1.10.1"
   }
 }
