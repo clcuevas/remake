@@ -18,16 +18,16 @@
   },
   "homepage": "https://github.com/clcuevas/remake",
   "dependencies": {
-    "angular": "^1.4.3",
+    "angular": "^1.4.4",
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.13.2",
+    "body-parser": "^1.13.3",
     "bootstrap": "^3.3.5",
     "eat": "^0.1.1",
-    "express": "^4.13.1",
-    "mongoose": "^4.0.7",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.3",
     "passport": "^0.2.2",
     "passport-http": "^0.2.2",
-    "validator": "^3.41.2"
+    "validator": "^3.43.0"
   },
   "devDependencies": {
     "angular-base64": "^2.0.5",
