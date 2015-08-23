@@ -1,8 +1,14 @@
 /*
-    HEX COLORS
+      HEX COLORS
 
-Header: #669999;
-Footer: #59484F;
+Header:             #669999;
+Footer:             #5D7B93;
+Auth Active Bar:    #CC5543;
+Auth Box:           #E6E2DF;
+Auth Border Box:    #CC5543;
+Dialog Box:         #D1CEC5;
+Dialog Box Overlay: #000000;
+
 */
 
 html,
@@ -208,10 +214,32 @@ form.new-item label {
   FOOTER
 */
 #footer {
-  background: #59484F;
+  background: #5D7B93;
   width: 100%;
-  height: 100px;
+  height: 112px;
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+#social_icons {
+  text-align: center;
+}
+
+#social_icons li {
+  display: inline;
+}
+
+#social_icons li a img {
+  height: 40px;
+  width: 40px;
+  margin-top: 17px;
+}
+
+.site-footer p {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 12px;
 }
