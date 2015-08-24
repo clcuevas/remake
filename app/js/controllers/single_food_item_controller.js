@@ -101,6 +101,5 @@ module.exports = function(app) {
       //set temp obj to null for next edit
       $scope.tempItem = null;
     };
-
   }]);
 };
