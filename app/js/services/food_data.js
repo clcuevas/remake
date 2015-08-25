@@ -9,7 +9,7 @@ module.exports = function(app) {
       store: [],
       //hold object for global app functionality
       singleFood: null,
-      //function that allows food data being passwed around globally
+      //function that allows food data being passed around globally
       storeData: function(data) {
         this.store = data;
       }

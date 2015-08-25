@@ -10,6 +10,7 @@ var itemsSchema = mongoose.Schema({
   imageURL: String,
   caption: String,
   exp: Date,
+  createdAt: {type: Date, default: Date.now},
   qty: Number,
   qtyType: String,
   cost: Number,

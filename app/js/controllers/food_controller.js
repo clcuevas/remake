@@ -7,11 +7,10 @@ module.exports = function(app) {
 
     //hold errors during rendering
     $scope.errors = [];
-    //hold food items from the server
-    $scope.allItems = [];
     //hold only items we want to display
     $scope.displayedItems = [];
-
+    //hold all food items
+    $scope.allItems = [];
     //grab obj clicked on and store to food data service
     $scope.singleFood = foodData.singleFood;
 
@@ -23,7 +22,6 @@ module.exports = function(app) {
       $cookies.putObject('singleFood', foodData.store.filter(function(item) {
         return item._id === thisItem._id;
       }));
-
       //single food item path using singFoodController
       $location.path('/item');
     };
@@ -72,7 +70,15 @@ module.exports = function(app) {
       });
     };
 
-    $scope.getDisplayedItems(15);
+    //this function is to perform a GET method for ALL food items the user created
+    $scope.showAllItems = function() {
+      Item.getAll(function(err, data) {
+        data.forEach(function(item) {
+          // console.log(item);
+          $scope.allItems.push(item);
+        });
+      });
+    };
 
     $scope.createNewItem = function(item) {
       //insert imageURL to item obj depending on itemType
@@ -102,6 +108,7 @@ module.exports = function(app) {
 
     $scope.removeItem = function(item) {
       $scope.displayedItems.splice($scope.displayedItems.indexOf(item), 1);
+      $scope.allItems.splice($scope.allItems.indexOf(item), 1);
 
       Item.remove(item, function(err) {
         if (err) {
@@ -125,7 +132,6 @@ module.exports = function(app) {
     //BELOW IMAGES NEED TO BE SAVED AND ADDED TO PROJECT UNDER lib/img
 
     $scope.populateImages = function(item) {
-      console.log('populate images function');
       if (item.itemType == 'vegetable') {
         item.imageURL = 'img/vegetable.jpg';
       }
@@ -147,5 +153,9 @@ module.exports = function(app) {
       }
     };
 
+    //run the below functions when controller loads
+    $scope.showAllItems();
+    //display only 15 food items in home page
+    $scope.getDisplayedItems(15);
   }]);
 };
