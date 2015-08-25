@@ -41,8 +41,6 @@ module.exports = function(app) {
       $cookies.putObject('singleFood', $scope.singleFood);
     }
 
-    makeCookie();
-
     $scope.addDaysProperty = function(arr) {
       arr.forEach(function(item) {
         var thisDate = new Date(item.exp);
@@ -50,18 +48,15 @@ module.exports = function(app) {
       });
     };
 
-    $scope.addDaysProperty($scope.singleFood);
-
     $scope.saveItem = function(item) {
       //reset editing status
       item.editing = false;
-      Item.save(item, function(err, data) {
+      $scope.$watch(Item.save(item, function(err, data) {
         if (err) {
           console.log(err);
           return $scope.errors.push({msg: 'could not save changes'});
         }
-      });
-
+      }));
       makeCookie();
     };
 
@@ -101,5 +96,8 @@ module.exports = function(app) {
       //set temp obj to null for next edit
       $scope.tempItem = null;
     };
+
+    makeCookie();
+    $scope.addDaysProperty($scope.singleFood);
   }]);
 };

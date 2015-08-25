@@ -3,10 +3,26 @@
     <li data-ng-repeat="item in singleFood">
       <section class="item_wrapper" style="background-image: url({{item.imageURL}})">
       </section>
-      <p>Name: {{item.itemName}}</p>
-      <p>Qty: {{item.qty}} {{item.qtyType}}</p>
-      <p>Cost: ${{item.cost}}</p>
-      <p>{{item.caption}}</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Qty</th>
+            <th>Cost</th>
+            <th>Expiration</th>
+            <th>Caption</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{item.itemName}}</td>
+            <td>{{item.qty}} {{item.qtyType}}</td>
+            <td>$ {{item.cost}}</td>
+            <td>{{item.exp.slice(0, 10)}}</td>
+            <td>{{item.caption}}</td>
+          </tr>
+        </tbody>
+      </table>
       <button data-ng-if="!item.editing" data-ng-disabled="!item._id" data-ng-click="editItem(item)">Edit</button>
       <div data-single-food-item-edit-directive
             data-save="saveItem(item)"
@@ -17,13 +33,13 @@
       </div>
     </li>
   </ul>
-  <div>
-    <button data-ng-click="toggleRecipes(item.itemName)">Get Recipes</button>
-    <ul>
-      <li data-ng-repeat="recipe in displayedRecipes">
-        <a href={{recipe.source_url}}><img src={{recipe.image_url}} /></a>
-        <h3>{{recipe.title}}</h3>
-      </li>
-    </ul>
-  </div>
+</section>
+<section id="recipes">
+  <button data-ng-click="toggleRecipes(item.itemName)">Get Recipes</button>
+  <ul class="recipes-list">
+    <li data-ng-repeat="recipe in displayedRecipes">
+      <h3>{{recipe.title}}</h3>
+      <a href={{recipe.source_url}}><img src={{recipe.image_url}} /></a>
+    </li>
+  </ul>
 </section>

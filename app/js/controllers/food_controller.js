@@ -22,7 +22,7 @@ module.exports = function(app) {
       $cookies.putObject('singleFood', foodData.store.filter(function(item) {
         return item._id === thisItem._id;
       }));
-
+      $scope.singleFood = thisItem;
       //single food item path using singFoodController
       $location.path('/item');
     };
@@ -75,6 +75,7 @@ module.exports = function(app) {
     $scope.showAllItems = function() {
       Item.getAll(function(err, data) {
         data.forEach(function(item) {
+          // console.log(item);
           $scope.allItems.push(item);
         });
       });
