@@ -17,7 +17,7 @@
       <td>{{item.qty}} {{item.qtyType}}</td>
       <td>${{item.cost}}</td>
       <td>{{item.exp.slice(0, 10)}}</td>
-      <td><button data-ng-click="removeItem(item)">Delete</button></td>
+      <td><button class="delete-item-btn" data-ng-click="removeItem(item)">Delete</button></td>
     </tr>
   </tbody>
 </table>
