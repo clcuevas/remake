@@ -236,6 +236,11 @@ form.new-item label {
   margin-top: 17px;
 }
 
+#social_icons li a:hover {
+  position: relative;
+  top: -5px;
+}
+
 .site-footer p {
   text-align: center;
   font-size: 16px;
