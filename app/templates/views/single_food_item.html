@@ -17,8 +17,8 @@
           <tr>
             <td>{{item.itemName}}</td>
             <td>{{item.qty}} {{item.qtyType}}</td>
-            <td>$ {{item.cost}}</td>
-            <td>{{item.exp.slice(0, 10)}}</td>
+            <td>{{item.cost | currency}}</td>
+            <td>{{item.exp | date}}</td>
             <td>{{item.caption}}</td>
           </tr>
         </tbody>
