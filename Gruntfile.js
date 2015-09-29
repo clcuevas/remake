@@ -77,6 +77,22 @@ module.exports = function(grunt) {
         dest: 'build/',
         //only copy files
         filter: 'isFile'
+      },
+      css: {
+        cwd: 'app/',
+        expand: true,
+        flatten: false,
+        src: '**/*.css',
+        dest: 'build/',
+        filter: 'isFile'
+      },
+      img: {
+        cwd: 'app/',
+        expand: true,
+        flatten: false,
+        src: ['**/*.jpg', '**/*.png'],
+        dest: 'build/',
+        filter: 'isFile'
       }
     },
 
@@ -91,5 +107,5 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['jshint:dev', 'jscs:dev', 'simplemocha:dev']);
   grunt.registerTask('karmatest', ['webpack:karmaTest', 'karma:test']);
   grunt.registerTask('dev:tests', ['test', 'karmatest']);
-  grunt.registerTask('build', ['webpack:client', 'copy:html']);
+  grunt.registerTask('build', ['webpack:client', 'copy:html', 'copy:css', 'copy:img']);
 };

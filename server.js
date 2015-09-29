@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/freezr_dev');
 
 app.use(passport.initialize());
 app.use(express.static(__dirname + '/build'));
-app.use(express.static(__dirname + '/app'));
+// app.use(express.static(__dirname + '/app'));
 
 require('./lib/passport_strat.js')(passport);
 
