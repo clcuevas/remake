@@ -1,6 +1,5 @@
 'use strict';
 
-var path = require('path');
 var mongoose = require('mongoose');
 var express = require('express');
 var passport = require('passport');
@@ -17,7 +16,6 @@ var recipeRoutes = express.Router();
 
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/freezr_dev');
 
-// app.use(express.static(__dirname + '/app'));
 app.use(passport.initialize());
 
 require('./lib/passport_strat.js')(passport);
@@ -31,7 +29,7 @@ app.use('/api', freezrRoutes);
 app.use('/api', usersRoutes);
 app.use('/api', recipeRoutes);
 
-app.use(express.static(path.join(__dirname, '/build')));
+app.use(express.static(__dirname + '/build'));
 
 app.listen(process.env.PORT || 3000, function() {
   console.log('server running on PORT ' + (process.env.PORT || 3000));
