@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
+  var path = require('path');
   //simple testing
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-simple-mocha');
@@ -47,7 +48,7 @@ module.exports = function(grunt) {
       client: {
         entry: __dirname + '/app/js/client.js',
         output: {
-          path: 'build/',
+          path: path.join(__dirname, 'build/'),
           filename: 'bundle.js'
         }
       },
