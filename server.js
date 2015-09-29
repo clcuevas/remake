@@ -1,5 +1,6 @@
 'use strict';
 
+var path = require('path');
 var mongoose = require('mongoose');
 var express = require('express');
 var passport = require('passport');
@@ -16,7 +17,7 @@ var recipeRoutes = express.Router();
 
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/freezr_dev');
 
-app.use(express.static(__dirname + '/build'));
+app.use(express.static(path.join(__dirname, '/build')));
 // app.use(express.static(__dirname + '/app'));
 app.use(passport.initialize());
 
