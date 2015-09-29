@@ -27,7 +27,8 @@
     "passport": "^0.2.2",
     "passport-http": "^0.2.2",
     "superagent": "^1.4.0",
-    "validator": "^3.43.0"
+    "validator": "^3.43.0",
+    "webpack": "^1.12.2"
   },
   "devDependencies": {
     "angular-base64": "^2.0.5",
@@ -54,7 +55,7 @@
     "phantomjs": "^1.9.18",
     "superagent": "^1.3.0",
     "superagent-cli": "^2.0.0",
-    "webpack": "^1.11.0",
+    "webpack": "^1.12.2",
     "webpack-dev-server": "^1.10.1"
   }
 }
