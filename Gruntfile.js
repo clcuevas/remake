@@ -48,7 +48,7 @@ module.exports = function(grunt) {
       client: {
         entry: __dirname + '/app/js/client.js',
         output: {
-          path: path.join(__dirname, 'build/'),
+          path: 'build/',
           filename: 'bundle.js'
         }
       },
