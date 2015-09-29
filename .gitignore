@@ -1,6 +1,7 @@
 node_modules/
 .DS_Store
 db/
-build/
+**/build/
+**/bundle.js
 test/karma_test/bundle.js
 
