@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "grunt dev:tests",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "grunt build"
   },
   "repository": {
     "type": "git",
