@@ -6,7 +6,7 @@
   "scripts": {
     "test": "grunt dev:tests",
     "start": "node server.js",
-    "postinstall": "./node_modules/grunt/bin/grunt build"
+    "postinstall": "./node_modules/grunt/lib/grunt build"
   },
   "repository": {
     "type": "git",
