@@ -108,5 +108,5 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['jshint:dev', 'jscs:dev', 'simplemocha:dev']);
   grunt.registerTask('karmatest', ['webpack:karmaTest', 'karma:test']);
   grunt.registerTask('dev:tests', ['test', 'karmatest']);
-  grunt.registerTask('build', ['webpack:client', 'copy:html', 'copy:css', 'copy:img']);
+  grunt.registerTask('claudia', ['webpack:client', 'copy:html', 'copy:css', 'copy:img']);
 };
