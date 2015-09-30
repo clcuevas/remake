@@ -45,6 +45,7 @@ module.exports = function(app) {
         }
 
         foodData.storeData(data);
+        //the callback here is the function(arr) in getDisplayedItems
         callback(foodData.store);
       });
     };
