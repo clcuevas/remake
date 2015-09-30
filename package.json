@@ -20,6 +20,10 @@
   "homepage": "https://github.com/clcuevas/remake",
   "dependencies": {
     "angular": "^1.4.4",
+    "angular-base64": "^2.0.5",
+    "angular-cookies": "^1.4.7",
+    "angular-mocks": "^1.4.7",
+    "angular-route": "^1.4.7",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.13.3",
     "eat": "^0.1.1",
