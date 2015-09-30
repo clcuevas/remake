@@ -1,0 +1,340 @@
+/*
+      HEX COLORS
+
+Header:             #669999;
+Footer:             #5D7B93;
+Auth Active Bar:    #CC5543;
+Auth Box:           #E6E2DF;
+Auth Border Box:    #CC5543;
+Dialog Box:         #D1CEC5;
+Dialog Box Overlay: #000000;
+
+*/
+
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+#page {
+  min-height:100%;
+  position:relative;
+}
+/*
+  HEADER
+*/
+
+#header {
+  background-color: #669999;
+  height: 60px;
+  position: relative;
+}
+
+.logo h3.logo-text {
+  position: absolute;
+  color: #fff;
+  font-size: 36px;
+  float: left;
+  left: 10%;
+  top: -20%;
+}
+
+.logout {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
+
+.username {
+  position: absolute;
+  top: 30%;
+  right: 17%;
+  color: #fff;
+  font-size: 18px;
+}
+
+/*
+  AUTHENTICATION
+*/
+
+.nav > li {
+  margin-right: 5px;
+  line-height: 1.42857143;
+  float: left;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  border-color: #eee #eee #ddd;
+}
+
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd;
+}
+
+.active {
+  background-color: #CC5543;
+  color: #fff;
+}
+
+.auth_message {
+  float: left;
+  left: auto;
+  position: absolute;
+  width: 400px;
+  margin-top: 1%;
+}
+
+.auth {
+  float: right;
+  right: 15%;
+  position: absolute;
+  max-height: 89%;
+  width: 400px;
+  max-width: 50%;
+  margin: auto;
+  margin-top: 4%;
+  text-align: center;
+  background-color: #E6E2DF;
+  opacity: 0.97;
+  border: 2.5px solid transparent;
+  border-color: #CC5543;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+fieldset legend {
+  color: #000;
+  font-style: bold;
+  font-size: 28px;
+}
+
+/*
+  HOMEPAGE CONTENT
+*/
+#content {
+  padding-top: 3%;
+  padding-bottom: 12%; /* Height of the footer element */
+  overflow: auto;
+  margin: 0 auto;
+  width: 960px;
+}
+
+/* Food Items Wrapper */
+.item_wrapper {
+  height: 0;
+  width: 15%;
+  padding-bottom: 15%;
+  margin: 2%;
+  border-radius: 10px;
+  float:left;
+  background-size: cover;
+  text-align:center;
+  position:relative;
+  border: 0.2em solid #ddd;
+}
+
+.item_wrapper p {
+  font-weight: bold;
+  font-size: 20px;
+  color: #CC5543;
+}
+
+.item_wrapper p button {
+  color: black;
+  padding-left: 3px;
+  position: absolute;
+  right: 0;
+}
+
+/*
+  DIALOG BOX TEST
+*/
+
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position:absolute;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity: 0.6;
+}
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index:10000;
+  position: absolute;
+  width: 50%; /* Default */
+
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #D1CEC5;
+  box-shadow: 4px 4px 80px #000;
+}
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: left;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+
+form.new-item {
+  margin: 5% 25% 5% 23%;
+}
+
+form.new-item label {
+  font-weight: normal;
+}
+
+.new-item li {
+  font-size: 14px;
+  padding: 2px;
+}
+
+/*
+  FOOTER
+*/
+#footer {
+  background: #5D7B93;
+  width: 100%;
+  height: 145px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#social_icons {
+  text-align: center;
+}
+
+#social_icons li {
+  display: inline;
+}
+
+#social_icons li a img {
+  height: 40px;
+  width: 40px;
+  margin-top: 17px;
+}
+
+#social_icons li a:hover {
+  position: relative;
+  top: -5px;
+}
+
+.site-footer p {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+
+.about a {
+  color: #fff;
+}
+
+.about a:hover {
+  color: #8EE5EE;
+}
+
+/*
+    BUTTONS
+*/
+
+.new-item-btn {
+  position: absolute;
+  right: 18%;
+  top: 95px;
+  -moz-box-shadow: inset 0px 1px 0px 0px #CC5543;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #CC5543;
+  box-shadow: inset 0px 1px 0px 0px #CC5543;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #CC5543), color-stop(1, #CC5543));
+  background: -moz-linear-gradient(top, #CC5543 5%, #CC5543 100%);
+  background:-o-linear-gradient(top, #CC5543 5%, #CC5543 100%);
+  background:-ms-linear-gradient(top, #CC5543 5%, #CC5543 100%);
+  background:linear-gradient(to bottom, #CC5543 5%, #CC5543 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+  background-color: #CC5543;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #CC5543;
+}
+
+.new-item-btn:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+  background:-moz-linear-gradient(top, #CC5543 5%, #d0451b 100%);
+  background:-webkit-linear-gradient(top, #CC5543 5%, #d0451b 100%);
+  background:-o-linear-gradient(top, #CC5543 5%, #d0451b 100%);
+  background:-ms-linear-gradient(top, #CC5543 5%, #d0451b 100%);
+  background:linear-gradient(to bottom, #CC5543 5%, #d0451b 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+  background-color:#bc3315;
+}
+
+.delete-item-btn {
+  -moz-box-shadow: inset 0px 1px 0px 0px #cf866c;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #cf866c;
+  box-shadow: inset 0px 1px 0px 0px #cf866c;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+  background: -moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+  background-color:#d0451b;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:13px;
+  padding:6px 16px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #854629;
+}
+
+.delete-item-btn:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+  background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+  background-color:#bc3315;
+}

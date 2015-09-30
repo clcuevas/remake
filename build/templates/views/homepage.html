@@ -1,0 +1,26 @@
+<section class="user-inventory homepage">
+  <div class="search">
+    <label>Search: </label>
+    <input type="text" placeholder="Search Your Freezr" data-ng-model="search.$">
+  </div>
+  <div id="inventory">
+    <h2>Your Inventory</h2>
+    <p>This page displays only the 15 most recent food items in your inventory. To view all items, <a href="/#/display_all">click here</a>.</p>
+    <ul>
+      <li class="item_list" data-ng-repeat="item in displayedItems | filter:search | orderBy: 'createdAt'" data-ng-click="saveSingleFood(item)">
+        <section class="item_wrapper" style="background-image: url({{item.imageURL}})">
+          <p>{{item.itemName}} <button data-ng-if="!item.editing" data-ng-click="removeItem(item)">X</button></p>
+        </section>
+      </li>
+    </ul>
+  </div>
+
+  <button class="new-item-btn" data-ng-click="toggleForm()">Add Food Item</button>
+  <modal-dialog show="modalShown" width="750px" height="60%">
+    <div ng-show="showThisForm">
+      <div data-food-inventory-form-directive
+          data-create="createNewItem(item)"
+          data-item="item"></div>
+    </div>
+  </modal-dialog>
+</section>
