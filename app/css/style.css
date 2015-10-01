@@ -11,35 +11,12 @@ Dialog Box Overlay: #000000;
 
 */
 
-html,
-body {
-  margin:0;
-  padding:0;
-  height:100%;
-}
 
-#page {
-  min-height:100%;
-  position:relative;
-}
 /*
   HEADER
 */
 
-#header {
-  background-color: #669999;
-  height: 60px;
-  position: relative;
-}
 
-.logo h3.logo-text {
-  position: absolute;
-  color: #fff;
-  font-size: 36px;
-  float: left;
-  left: 10%;
-  top: -20%;
-}
 
 .logout {
   position: absolute;
