@@ -2,4 +2,6 @@
 
 Freezr App - TEST
 
+**** Currently working on a more responsive CSS design. ****
+
 [Deployed To Heroku!](http://freezr-app-remake.herokuapp.com)
