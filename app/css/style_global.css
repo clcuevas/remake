@@ -49,3 +49,22 @@ h3.logo-text {
   display: inline-block;
   margin-right: 10px;
 }
+
+/* ******************
+      FOOTER
+******************** */
+#footer {
+  background-color: #555;
+  margin: 0 auto;
+  padding: 2px;
+  font-size: 1.6em;
+}
+
+.site-footer {
+  max-width: 820px;
+  text-align: center;
+}
+
+.site-footer p {
+  color: #fff;
+}

@@ -13,4 +13,24 @@
   .logo {
     width: 400px;
   }
+
+  /*********************
+        FOOTER
+  ******************** */
+  .site-footer {
+    width: 80%;
+    margin: 30px auto 40px auto;
+  }
+
+  #social-icons li {
+    display: inline;
+  }
+
+  #social-icons a img:hover{
+    -moz-transform: translate(-2px, -2px);
+    -ms-transform: translate(-2px, -2px);
+    -o-transform: translate(-2px, -2px);
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
 }
