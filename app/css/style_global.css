@@ -50,6 +50,56 @@ h3.logo-text {
   margin-right: 10px;
 }
 
+/*********************
+      AUTHENTICATION
+******************** */
+.authentication {
+  margin: 60px auto;
+  width: 820px;
+}
+
+.nav > li {
+  margin-right: 5px;
+  line-height: 1.42857143;
+  float: left;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  border-color: #eee #eee #ddd;
+}
+
+/*.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}*/
+
+/*.nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd;
+}*/
+
+.active {
+  background-color: #CC5543;
+  color: #fff;
+}
+
+.auth-view {
+  max-height: 89%;
+  width: 400px;
+  text-align: center;
+  background-color: #E6E2DF;
+  opacity: 0.97;
+  border: 2.5px solid transparent;
+  border-color: #CC5543;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 30px;
+}
+
 /* ******************
       FOOTER
 ******************** */
@@ -67,4 +117,16 @@ h3.logo-text {
 
 .site-footer p {
   color: #fff;
+}
+
+#social-icons li {
+  display: inline;
+}
+
+#social-icons a img:hover{
+  -moz-transform: translate(-2px, -2px);
+  -ms-transform: translate(-2px, -2px);
+  -o-transform: translate(-2px, -2px);
+  -webkit-transform: translate(-2px, -2px);
+  transform: translate(-2px, -2px);
 }
