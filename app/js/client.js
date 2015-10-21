@@ -25,7 +25,6 @@ require('./auth/directives/display_user_directive.js')(freezrApp);
 require('./auth/directives/create_user_directive.js')(freezrApp);
 require('./directives/header_directive.js')(freezrApp);
 require('./directives/food_inventory_form_directive.js')(freezrApp);
-require('./directives/search_bar_directive.js')(freezrApp);
 require('./directives/single_food_form_directive.js')(freezrApp);
 require('./directives/footer_directive.js')(freezrApp);
 require('./directives/dialog_directive.js')(freezrApp);
