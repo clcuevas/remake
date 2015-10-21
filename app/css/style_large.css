@@ -93,6 +93,44 @@
     padding: 2px;
   }
 
+  /* *******************
+        HOMEPAGE
+  ******************** */
+  .new-item-btn {
+    float: right;
+    margin-top: -40px;
+  }
+
+  /* *******************
+    HOMEPAGE FOOD VIEW
+  ********************* */
+  .item_wrapper {
+    height: 0;
+    width: 15%;
+    padding-bottom: 15%;
+    margin: 2%;
+    border-radius: 10px;
+    float:left;
+    background-size: cover;
+    text-align:center;
+    position:relative;
+    border: 0.2em solid #ddd;
+  }
+
+  .item_wrapper p {
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #fff;
+    text-align: left;
+    color: #CC5543;
+  }
+
+  .item_wrapper p button {
+    color: black;
+    padding-left: 3px;
+    position: absolute;
+    right: 0;
+  }
 
   /*********************
         FOOTER
