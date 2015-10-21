@@ -114,6 +114,14 @@ h3.logo-text {
 }
 
 /* ******************
+    USER HOMEPAGE
+******************** */
+.homepage {
+  width:820px;
+  margin: 40px auto 400px auto;
+}
+
+/* ******************
       FOOTER
 ******************** */
 #footer {
