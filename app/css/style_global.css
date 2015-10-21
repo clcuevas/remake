@@ -13,6 +13,11 @@ html, body {
   position: relative;
 }
 
+#content {
+  width: 80%;
+  margin: 0 auto;
+}
+
 /* ******************
       HEADER
 ******************** */
@@ -96,7 +101,24 @@ h3.logo-text {
       SEARCH
 ******************** */
 .search {
-  margin: 30px auto;
+  width: 700px;
+  /*margin: 30px auto;*/
+}
+
+/* ******************
+    USER HOMEPAGE
+******************** */
+.homepage {
+  width: 70%;
+  margin: 20px auto 300px auto;
+}
+
+/* ******************
+    USER HOMEPAGE
+******************** */
+.homepage {
+  width:820px;
+  margin: 40px auto 400px auto;
 }
 
 /* ******************
