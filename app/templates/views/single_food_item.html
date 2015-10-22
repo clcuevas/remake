@@ -3,6 +3,7 @@
     <li data-ng-repeat="item in singleFood">
       <section class="item_wrapper" style="background-image: url({{item.imageURL}})">
       </section>
+      <h1>{{item.itemName}}</h1>
       <table class="table">
         <thead>
           <tr>
@@ -35,11 +36,14 @@
   </ul>
 </section>
 <section id="recipes">
+  <p>Need a recipe idea? Look no more! Click the below button to view some recipes you can create with your <strong>food item</strong>!</p>
   <button data-ng-click="toggleRecipes(item.itemName)">Get Recipes</button>
-  <ul class="recipes-list">
-    <li data-ng-repeat="recipe in displayedRecipes">
+  <div class="recipes-list">
+  <ul>
+    <li class="col-md-4" data-ng-repeat="recipe in displayedRecipes">
       <h3>{{recipe.title}}</h3>
-      <a href={{recipe.source_url}}><img src={{recipe.image_url}} /></a>
+      <a target="_blank" href={{recipe.source_url}}><img src={{recipe.image_url}} /></a>
     </li>
   </ul>
+</div>
 </section>

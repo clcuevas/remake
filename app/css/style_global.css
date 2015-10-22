@@ -109,16 +109,21 @@ h3.logo-text {
     USER HOMEPAGE
 ******************** */
 .homepage {
-  width: 70%;
-  margin: 20px auto 300px auto;
+  width:820px;
+  margin: 40px auto 400px auto;
 }
 
 /* ******************
-    USER HOMEPAGE
+  SINGLE FOOD VIEW
 ******************** */
-.homepage {
-  width:820px;
-  margin: 40px auto 400px auto;
+.single-food {
+  width: 820px;
+  margin: 20px auto 10px auto;
+}
+
+#recipes {
+  width: 820px;
+  margin: 20px auto 300px auto;
 }
 
 /* ******************
