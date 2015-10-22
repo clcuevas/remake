@@ -139,12 +139,33 @@
   /* *******************
       SINGLE FOOD VIEW
   ******************* */
-  .recipes-list ul {text-align: center;}
+  .item-name {
+    display: inline-block;
+    margin-left: 2%;
+  }
+
+
+
+  .recipes-list {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .recipes-list ul {
+    list-style-type: none;
+    margin-bottom: 300px;
+    padding: 0;
+    background-color: #eee;
+  }
 
   .recipes-list li {
-    display: inline;
-    background-color: #eee;
-    margin: 10px;
+    display: inline-block;
+    margin: 10px auto 35px auto;
+    padding: 5px;
+  }
+
+  .recipes-list li h3 {
+    width: 300px;
   }
 
   .recipes-list li a img {
@@ -152,9 +173,6 @@
     width: 250px;
   }
 
-  .recipes-list li:last-child {
-    margin-bottom: 250px;
-  }
 
   .recipes-list ul li:hover {
     -webkit-transform: scale(1.25);
