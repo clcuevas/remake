@@ -136,6 +136,33 @@
     right: 0;
   }
 
+  /* *******************
+      SINGLE FOOD VIEW
+  ******************* */
+  .recipes-list ul {text-align: center;}
+
+  .recipes-list li {
+    display: inline;
+    background-color: #eee;
+    margin: 10px;
+  }
+
+  .recipes-list li a img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .recipes-list li:last-child {
+    margin-bottom: 250px;
+  }
+
+  .recipes-list ul li:hover {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    position: relative;
+    z-index: 5
+  }
+
   /*********************
         FOOTER
   ******************** */
