@@ -101,6 +101,10 @@
     margin-top: -40px;
   }
 
+  #inventory ul:last-child {
+    margin-bottom: 750px;
+  }
+
   /* *******************
     HOMEPAGE FOOD VIEW
   ********************* */
