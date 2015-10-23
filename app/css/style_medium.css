@@ -1,0 +1,9 @@
+@media (min-width: 501px) and (max-width: 799px) {
+  /*********************
+        HEADER
+  ******************** */
+  .site-header {
+    width: 80%;
+    margin: 30px auto 40px auto;
+  }
+}

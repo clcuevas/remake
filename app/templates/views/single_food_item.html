@@ -3,43 +3,52 @@
     <li data-ng-repeat="item in singleFood">
       <section class="item_wrapper" style="background-image: url({{item.imageURL}})">
       </section>
+      <div class="item-name">
+        <h1>{{item.itemName}}</h1>
+        <p>{{item.caption}}</p>
+      </div>
       <table class="table">
         <thead>
           <tr>
             <th>Item Name</th>
+            <th>Item Type</th>
             <th>Qty</th>
             <th>Cost</th>
+            <th>Storage Type</th>
             <th>Expiration</th>
-            <th>Caption</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>{{item.itemName}}</td>
+            <td>{{item.itemType}}</td>
             <td>{{item.qty}} {{item.qtyType}}</td>
             <td>{{item.cost | currency}}</td>
+            <td>{{item.storageType}}</td>
             <td>{{item.exp | date}}</td>
-            <td>{{item.caption}}</td>
           </tr>
         </tbody>
       </table>
-      <button data-ng-if="!item.editing" data-ng-disabled="!item._id" data-ng-click="editItem(item)">Edit</button>
+      <button class="btn btn-default" data-ng-if="!item.editing" data-ng-disabled="!item._id" data-ng-click="editItem(item)">Edit</button>
       <div data-single-food-item-edit-directive
             data-save="saveItem(item)"
             data-button-text="'Save'"
             data-ng-if="item.editing"
             data-item="item">
-        <button data-ng-click="cancelEditing(item)">Cancel</button>
+        <!-- <button class="btn btn-default" data-ng-click="cancelEditing(item)">Cancel</button>-->
       </div>
     </li>
   </ul>
-</section>
-<section id="recipes">
-  <button data-ng-click="toggleRecipes(item.itemName)">Get Recipes</button>
-  <ul class="recipes-list">
-    <li data-ng-repeat="recipe in displayedRecipes">
-      <h3>{{recipe.title}}</h3>
-      <a href={{recipe.source_url}}><img src={{recipe.image_url}} /></a>
-    </li>
-  </ul>
+  <section id="recipes">
+    <p>Need a recipe idea? Look no more! Click the below button to view some recipes you can create with your <strong>food item</strong>!</p>
+    <button class="btn btn-primary" data-ng-click="toggleRecipes(item.itemName)">Get Recipes</button>
+    <div class="recipes-list">
+      <ul>
+        <li class="" data-ng-repeat="recipe in displayedRecipes">
+          <h3>{{recipe.title}}</h3>
+          <a target="_blank" href={{recipe.source_url}}><img src={{recipe.image_url}} /></a>
+        </li>
+      </ul>
+    </div>
+  </section>
 </section>

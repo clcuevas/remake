@@ -1,16 +1,48 @@
-<form name="{{'editing'+item._id}}" data-ng-if="item.editing" data-ng-submit="saveItem(item)">
-  <label>Item Name: </label>
-  <input type="text" placeholder="item name" data-ng-model="item.itemName">
-  <label>Qty: </label>
-  <input type="text" placeholder="quantity" data-ng-model="item.qty">
-  <label>Qty Type: </label>
-  <select data-ng-model="item.qtyType">
-    <option value="oz">oz</option>
-    <option value="fl oz">fl oz</option>
-    <option value="cup">cup</option>
-    <option value="lb">lb</option>
-  </select>
-  <button type="submit">Save</button>
-  <!-- <button class="btn" data-ng-click="cancelEditing(item)">Cancel</button>-->
-  <div data-ng-transclude></div>
+<form class="" name="{{'editing'+item._id}}" data-ng-if="item.editing" data-ng-submit="saveItem(item)">
+  <div class="form-group">
+    <label>Item Name:
+      <input type="text" class="form-control" placeholder="item name" data-ng-model="item.itemName">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Qty:
+      <input type="text" class="form-control" placeholder="quantity" data-ng-model="item.qty">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Qty Type:
+      <select class="form-control" data-ng-model="item.qtyType">
+        <option value="oz">oz</option>
+        <option value="fl oz">fl oz</option>
+        <option value="cup">cup</option>
+        <option value="lb">lb</option>
+      </select>
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Item Cost:
+      <input type="currency" placeholder="cost" data-ng-model="item.cost" class="form-control"/>
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Storage:
+      <select data-ng-model="item.storageType" class="form-control">
+        <option value="" disabled selected style='display:none;'>storage area</option>
+        <option value="refrigerator">Refrigerator</option>
+        <option value="freezer">Freezer</option>
+        <option value="pantry">Pantry</option>
+        <option value="cabinet">Kitchen</option>
+      </select>
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Caption:
+      <textarea class="form-control" data-ng-model="item.caption" placeholder="Add food description here..." rows="2" cols="item.caption.length"></textarea>
+    </label>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button class="btn btn-default" data-ng-click="cancelEditing(item)">Cancel</button>
+    <div data-ng-transclude></div>
+  </div>
 </form>
