@@ -3,24 +3,29 @@
     <li data-ng-repeat="item in singleFood">
       <section class="item_wrapper" style="background-image: url({{item.imageURL}})">
       </section>
-      <h1 class="item-name">{{item.itemName}}</h1>
+      <div class="item-name">
+        <h1>{{item.itemName}}</h1>
+        <p>{{item.caption}}</p>
+      </div>
       <table class="table">
         <thead>
           <tr>
             <th>Item Name</th>
+            <th>Item Type</th>
             <th>Qty</th>
             <th>Cost</th>
+            <th>Storage Type</th>
             <th>Expiration</th>
-            <th>Caption</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>{{item.itemName}}</td>
+            <td>{{item.itemType}}</td>
             <td>{{item.qty}} {{item.qtyType}}</td>
             <td>{{item.cost | currency}}</td>
+            <td>{{item.storageType}}</td>
             <td>{{item.exp | date}}</td>
-            <td>{{item.caption}}</td>
           </tr>
         </tbody>
       </table>
@@ -30,8 +35,8 @@
             data-button-text="'Save'"
             data-ng-if="item.editing"
             data-item="item">
-        <!-- <button class="btn btn-default" data-ng-click="cancelEditing(item)">Cancel</button>
- -->      </div>
+        <!-- <button class="btn btn-default" data-ng-click="cancelEditing(item)">Cancel</button>-->
+      </div>
     </li>
   </ul>
   <section id="recipes">

@@ -36,6 +36,10 @@ html, body {
   display: inline-block;
 }
 
+a.logo {
+  text-decoration: none;
+}
+
 h3.logo-text {
   color: #fff;
   font-size: 2em;
@@ -100,10 +104,7 @@ h3.logo-text {
 /* ******************
       SEARCH
 ******************** */
-.search {
-  width: 700px;
-  /*margin: 30px auto;*/
-}
+
 
 /* ******************
     USER HOMEPAGE
@@ -121,11 +122,6 @@ h3.logo-text {
   margin: 20px auto 10px auto;
 }
 
-/*#recipes {
-  width: 820px;
-  margin: 20px auto 300px auto;
-}
-*/
 /* ******************
       FOOTER
 ******************** */
