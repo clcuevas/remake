@@ -12,6 +12,7 @@
         <th>Qty</th>
         <th>Cost</th>
         <th>Expires On</th>
+        <th>View Item</th>
         <th>Delete?</th>
       </tr>
     </thead>
@@ -22,6 +23,7 @@
         <td>{{item.qty}} {{item.qtyType}}</td>
         <td>{{item.cost | currency}}</td>
         <td>{{item.exp | date}}</td>
+        <td><button class="btn btn-default" data-ng-click="saveSingleFood(item)">View</button></td>
         <td><button class="btn btn-danger" data-ng-click="removeItem(item)">Delete</button></td>
       </tr>
     </tbody>
