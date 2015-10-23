@@ -93,6 +93,14 @@
     padding: 2px;
   }
 
+  /* ******************
+      SEARCH
+  ******************** */
+  .search {
+    width: 700px;
+    margin-top: 40px;
+  }
+
   /* *******************
         HOMEPAGE
   ******************** */
@@ -179,6 +187,14 @@
     -moz-transform: scale(1.25);
     position: relative;
     z-index: 5
+  }
+
+  /* *******************
+    DISPLAY ALL VIEW
+  ******************** */
+  .display-all-view {
+    width: 820px;
+    margin: 0 auto 300px auto;
   }
 
   /*********************
