@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       <tr data-ng-repeat="item in allItems | orderBy: 'exp' | filter:search">
-        <td>{{item.createdAt.slice(0, 10)}}</td>
+        <td>{{item.createdAt | date}}</td>
         <td>{{item.itemName}}</td>
         <td>{{item.qty}} {{item.qtyType}}</td>
         <td>{{item.cost | currency}}</td>
