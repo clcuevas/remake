@@ -197,6 +197,14 @@
     margin: 0 auto 300px auto;
   }
 
+  /* *******************
+      ABOUT US PAGE
+  ******************** */
+  .about-us-view {
+    width: 820px;
+    margin: 0 auto;
+  }
+
   /*********************
         FOOTER
   ******************** */
