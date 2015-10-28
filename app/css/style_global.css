@@ -105,6 +105,16 @@ h3.logo-text {
       SEARCH
 ******************** */
 
+/* ******************
+      ERRORS
+******************** */
+.error-container {
+  margin-bottom: 13px;
+}
+
+.error-container span {
+  padding: 10px;
+}
 
 /* ******************
     USER HOMEPAGE
