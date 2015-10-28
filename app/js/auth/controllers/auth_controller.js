@@ -38,7 +38,7 @@ module.exports = function(app) {
     $scope.authSubmit = function(user) {
       if (user.password_conf) {
         if (user.password !== user.password_conf) {
-          return window.alert('Your password and confirmation do not match!');
+          return window.alert('Your password and password confirmation do not match!');
         }
 
         auth.create(user, function(err) {
@@ -53,7 +53,7 @@ module.exports = function(app) {
         auth.signIn(user, function(err) {
           if (err) {
             console.log(err);
-            return $scope.errors.push({msg: 'Could not sign in'});
+            return $scope.errors.push({msg: 'Email/Password could not be verified.'});
           }
 
           $location.path('/homepage');
