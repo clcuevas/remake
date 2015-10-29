@@ -1,7 +1,6 @@
 <section data-ng-controller="authController">
   <form name="logInForm" data-ng-submit="authSubmit(user)">
     <fieldset>
-      <!-- <legend>Sign In</legend> -->
       <div role="alert" class="error-container">
         <span class="alert alert-warning" data-ng-show="logInForm.email.$error.email">Not a valid email!</span>
         <span class="alert alert-danger" data-ng-show="errors.length != 0">{{errors[0].msg}}</span>

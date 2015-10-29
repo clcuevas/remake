@@ -1,15 +1,15 @@
 <section data-ng-controller="authController">
   <form name="createUserForm" data-ng-submit="authSubmit(user)" class="">
     <fieldset>
-      <!-- <legend>Create New Account</legend> -->
       <div role="alert" class="error-container">
-
+        <span class="alert alert-warning" data-ng-show="createUserForm.email.$error.email">Not a valid email address</span>
+        <span class="alert alert-danger" data-ng-show="errors.length != 0">{{errors[0]}}</span>
       </div>
       <p><label for="username">Username </label><br />
         <input type="text" class="form-control" required name="username" placeholder="Username" data-ng-model="user.username">
       </p>
       <p><label for="email">Email address</label><br />
-        <input type="text" class="form-control" required name="email" placeholder="Email" data-ng-model="user.email">
+        <input type="email" class="form-control" required name="email" placeholder="Email" data-ng-model="user.email">
       </p>
       <p><label for="password">Password</label><br />
         <input type="password" class="form-control" required name="password" placeholder="Password" data-ng-model="user.password">

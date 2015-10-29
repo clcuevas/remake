@@ -16,24 +16,24 @@ module.exports = function(router, passport) {
 
     //make sure username field is not null
     if (validator.isNull(req.body.username)) {
-      return res.status(417).json({msg: 'username is required'});
+      return res.status(417).json({msg: 'Username is required'});
     }
 
     //make sure email is not null
     if (validator.isNull(req.body.email)) {
-      return res.status(417).json({msg: 'email is required'});
+      return res.status(417).json({msg: 'Email address is required'});
     }
 
     //make sure email being input is an email
     if (!validator.isEmail(req.body.email)) {
-      return res.status(417).json({msg: 'invalid email'});
+      return res.status(417).json({msg: 'Invalid email address'});
     }
 
     newUser.basic.email = req.body.email;
     newUser.basic.password = newUser.generateHash(req.body.password, function(err, hash) {
       if (err) {
         console.log(err);
-        return res.status(500).json({msg: 'could not save password'});
+        return res.status(500).json({msg: 'Could not save password'});
       }
 
       newUser.basic.password = hash;
@@ -50,7 +50,7 @@ module.exports = function(router, passport) {
           } else if (field == 'username') {
             return res.status(417).json({msg: 'Username already exists!'});
           } else {
-            return res.status(500).json({msg: 'could not create user'});
+            return res.status(500).json({msg: 'Could not create user. Please try again.'});
           }
         }
 
