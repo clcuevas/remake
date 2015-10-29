@@ -42,9 +42,11 @@ module.exports = function(app) {
         }
 
         auth.create(user, function(err) {
+          //find any issues that may arise when creating a new user account
+          //these issues can either be a duplicate key/value in auth_routes
           if (err) {
             console.log(err);
-            return $scope.errors.push({msg: 'Could not sign in'});
+            return $scope.errors.push(err.msg);
           }
 
           $location.path('/homepage');
