@@ -1,6 +1,6 @@
 {
   "name": "freezr",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An app to keep track of what is in your kitchen and when it will expire",
   "main": "server.js",
   "scripts": {

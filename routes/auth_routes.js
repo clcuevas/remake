@@ -14,16 +14,19 @@ module.exports = function(router, passport) {
 
     var newUser = new User(newUserData);
 
+    //make sure username field is not null
+    if (validator.isNull(req.body.username)) {
+      return res.status(417).json({msg: 'username is required'});
+    }
+
+    //make sure email is not null
     if (validator.isNull(req.body.email)) {
       return res.status(417).json({msg: 'email is required'});
     }
 
+    //make sure email being input is an email
     if (!validator.isEmail(req.body.email)) {
       return res.status(417).json({msg: 'invalid email'});
-    }
-
-    if (validator.isNull(req.body.username)) {
-      return res.status(417).json({msg: 'username is required'});
     }
 
     newUser.basic.email = req.body.email;
@@ -37,8 +40,18 @@ module.exports = function(router, passport) {
 
       newUser.save(function(err, user) {
         if (err) {
-          console.log(err);
-          return res.status(500).json({msg: 'could not create user'});
+          //if error occurs because of a dup key, grab the dup key and save it to field
+          var field = err.message.split('.$')[1];
+          field = field.split(' dup key')[0];
+          field = field.substring(0, field.lastIndexOf('_'));
+
+          if (field == 'basic.email') {
+            return res.status(417).json({msg: 'Email already exists!'});
+          } else if (field == 'username') {
+            return res.status(417).json({msg: 'Username already exists!'});
+          } else {
+            return res.status(500).json({msg: 'could not create user'});
+          }
         }
 
         user.generateToken(process.env.APP_SECRET, function(err, token) {

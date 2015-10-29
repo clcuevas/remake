@@ -1,7 +1,10 @@
 <section data-ng-controller="authController">
-  <form data-ng-submit="authSubmit(user)" class="">
+  <form name="createUserForm" data-ng-submit="authSubmit(user)" class="">
     <fieldset>
       <!-- <legend>Create New Account</legend> -->
+      <div role="alert" class="error-container">
+
+      </div>
       <p><label for="username">Username </label><br />
         <input type="text" class="form-control" required name="username" placeholder="Username" data-ng-model="user.username">
       </p>
