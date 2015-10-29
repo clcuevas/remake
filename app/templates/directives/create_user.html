@@ -2,8 +2,14 @@
   <form name="createUserForm" data-ng-submit="authSubmit(user)" class="">
     <fieldset>
       <div role="alert" class="error-container">
-        <span class="alert alert-warning" data-ng-show="createUserForm.email.$error.email">Not a valid email address</span>
-        <span class="alert alert-danger" data-ng-show="errors.length != 0">{{errors[0]}}</span>
+        <span class="alert alert-warning" data-ng-show="createUserForm.email.$error.email">
+          <div class="glyphicon glyphicon-exclamation-sign"></div>
+          Not a valid email address
+        </span>
+        <span class="alert alert-danger" data-ng-show="errors.length != 0">
+          <div class="glyphicon glyphicon-exclamation-sign"></div>
+          {{errors[0]}}
+        </span>
       </div>
       <p><label for="username">Username </label><br />
         <input type="text" class="form-control" required name="username" placeholder="Username" data-ng-model="user.username">
