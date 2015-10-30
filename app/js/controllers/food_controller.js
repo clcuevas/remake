@@ -75,8 +75,11 @@ module.exports = function(app) {
     $scope.showAllItems = function() {
       Item.getAll(function(err, data) {
         data.forEach(function(item) {
-          // console.log(item);
           $scope.allItems.push(item);
+
+          //calculate a countdown for items to expire
+          var thisItemDate = new Date(item.exp);
+          item.countdown = Math.round((thisItemDate.getTime() - Date.now()) / 86400000);
         });
       });
     };
