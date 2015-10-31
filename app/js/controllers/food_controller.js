@@ -51,6 +51,7 @@ module.exports = function(app) {
     };
 
     //assign expiration date to items
+    //REVIEW THIS FUNCTION TO SEE IF IT IS STILL REQUIRED
     $scope.addDaysProperty = function(arr) {
       arr.forEach(function(item) {
         var thisDate = new Date(item.exp);
@@ -67,6 +68,7 @@ module.exports = function(app) {
         }
 
         $scope.displayedItems = arr.slice(thisStart, num);
+        //REVIEW IF IT IS STILL REQUIRED
         $scope.addDaysProperty($scope.displayedItems);
       });
     };
