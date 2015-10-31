@@ -22,6 +22,8 @@ module.exports = function(app) {
 
         scope.hideModal = function() {
           scope.show = false;
+          //hide form when dialog modal is closed, grab scope from parent
+          scope.$parent.showThisForm = false;
         };
       },
       templateUrl: '/templates/directives/dialog_box.html'
