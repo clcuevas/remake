@@ -11,6 +11,7 @@
     "angular": true,
     "browser": true,
     "document": true,
-    "window": true
+    "window": true,
+    "esversion": 6
   }
 }
