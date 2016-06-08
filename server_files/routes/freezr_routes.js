@@ -1,15 +1,15 @@
 'use strict';
 
 let bodyparser = require('body-parser');
-let Items = require('../models/Items');
-// let eatAuth = require('../lib/eat_auth')(process.env.APP_SECRET);
+let Item = require('../models/Item');
+let eatAuth = require('../lib/eat_auth')(process.env.APP_SECRET);
 
 module.exports = function(router) {
   router.use(bodyparser.json());
 
-  router.post('/items', /*eatAuth,*/ (req, res) => {
+  router.post('/item', eatAuth, (req, res) => {
     let newItem = new Item(req.body);
-    //newItem.authorID = req.user.username;
+    newItem.authorID = req.user.username;
     newItem.save((err, data) => {
       if (err) {
         console.log(err);
@@ -20,8 +20,8 @@ module.exports = function(router) {
     });
   }); // end POST method
 
-  router.get('/items',/* eatAuth,*/ (req, res) => {
-    Items.find({/*authorID: req.user.username*/}, (err, data) => {
+  router.get('/item', eatAuth, (req, res) => {
+    Item.find({ authorID: req.user.username }, (err, data) => {
       if (err) {
         console.log(err);
         return res.status(500).json({ msg: 'internal server error' });
@@ -31,11 +31,16 @@ module.exports = function(router) {
     });
   }); // end GET method
 
-  router.put('/items/:id', (req, res) => {
+  /*
+    TODO: Add security to the PUT and DELETE requests. Users should
+    only be able to modify and delete items that they created.
+  */
+
+  router.put('/item/:id', (req, res) => {
     let updatedItem = req.body;
     delete updatedItem._id;
 
-    Items.update({ '_id': req.params.id }, updatedItem, (err, data) => {
+    Item.update({ '_id': req.params.id }, updatedItem, (err, data) => {
       if (err) {
         console.log(err);
         return res.status(500).json({ msg: 'internal server error' });
@@ -45,8 +50,8 @@ module.exports = function(router) {
     });
   }); // end PUT method
 
-  router.delete('/items/:id', (req, res) => {
-    Items.remove({ '_id': req.params.id }, (err, data) => {
+  router.delete('/item/:id', (req, res) => {
+    Item.remove({ '_id': req.params.id }, (err, data) => {
       if (err) {
         console.log(err);
         return res.status(500).json({ msg: 'internal server error' });

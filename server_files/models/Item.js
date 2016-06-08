@@ -16,4 +16,4 @@ let itemsSchema = mongoose.Schema({
   storageType: String
 });
 
-module.exports = mongoose.model('Items', itemsSchema);
+module.exports = mongoose.model('Item', itemsSchema);

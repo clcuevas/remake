@@ -19,8 +19,8 @@ app.use(passport.initialize());
 app.use(express.static(__dirname + '/public'));
 
 // Add routes here
-require('./api_server/routes/freezr_routes')(freezrRoutes);
-require('./api_server/routes/auth_routes')(userRoutes, passport);
+require('./server_files/routes/freezr_routes')(freezrRoutes);
+require('./server_files/routes/auth_routes')(userRoutes, passport);
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');

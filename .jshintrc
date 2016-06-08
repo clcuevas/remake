@@ -1,17 +1,32 @@
 {
-  "node": true,
-  "globals": {
-    "describe": true,
-    "it": true,
-    "before": true,
-    "after": true,
-    "beforeEach": true,
-    "afterEach": true,
-    "expect": true,
-    "angular": true,
-    "browser": true,
-    "document": true,
-    "window": true,
-    "esversion": 6
-  }
+  "predef": [
+    "document",
+    "window",
+    "-Promise"
+  ],
+  "browser": true,
+  "boss": true,
+  "curly": true,
+  "debug": false,
+  "devel": true,
+  "eqeqeq": true,
+  "evil": true,
+  "forin": false,
+  "immed": false,
+  "laxbreak": false,
+  "newcap": true,
+  "noarg": true,
+  "noempty": false,
+  "nonew": false,
+  "nomen": false,
+  "onevar": false,
+  "plusplus": false,
+  "regexp": false,
+  "undef": true,
+  "sub": true,
+  "strict": false,
+  "white": false,
+  "eqnull": true,
+  "esnext": true,
+  "unused": true
 }
