@@ -6,6 +6,10 @@ let eat = require('eat');
 
 let userSchema = mongoose.Schema({
   username: { type: String, unique: true },
+  name: {
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true }
+  },
   basic: {
     email: { type: String, unique: true, required: true },
     password: { type: String, required: true }

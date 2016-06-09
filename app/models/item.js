@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  authorID: DS.attr('string'),
+  author: DS.attr('string'),
   itemType: DS.attr('string'),
   itemName: DS.attr('string'),
   imageURL: DS.attr('string'),
